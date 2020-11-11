@@ -2,7 +2,7 @@
 
 **Paysera gateway driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/arbory/omnipay-paysera.svg?branch=master)](https://travis-ci.org/arbory/omnipay-paysera)
+[![Build Status](https://travis-ci.com/arbory/omnipay-paysera.svg?branch=master)](https://travis-ci.com/arbory/omnipay-paysera)
 [![Coverage Status](https://coveralls.io/repos/github/arbory/omnipay-paysera/badge.svg?branch=master)](https://coveralls.io/github/arbory/omnipay-paysera?branch=master)
 
 ## Installation
