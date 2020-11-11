@@ -106,7 +106,7 @@ class Gateway extends AbstractGateway
     /**
      * {@inheritdoc}
      */
-    public function acceptNotification(array $options = [])
+    public function completePurchase(array $options = [])
     {
         return $this->createRequest(AcceptNotificationRequest::class, $options);
     }

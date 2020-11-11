@@ -48,11 +48,11 @@ class GatewayTest extends GatewayTestCase
         $this->assertSame(1050, $request->getAmountInteger());
     }
 
-    public function testAcceptNotification()
+    public function testCompletePurchase()
     {
-        $this->assertTrue($this->gateway->supportsAcceptNotification());
+        $this->assertTrue($this->gateway->supportsCompletePurchase());
 
-        $request = $this->gateway->acceptNotification();
+        $request = $this->gateway->completePurchase();
         $this->assertInstanceOf('\Omnipay\Paysera\Message\AcceptNotificationRequest', $request);
     }
 }

@@ -5,42 +5,9 @@ namespace Omnipay\Paysera\Message;
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Common\Message\NotificationInterface;
-use Omnipay\Common\Exception\InvalidResponseException;
 
 class AcceptNotificationResponse extends AbstractResponse implements NotificationInterface
 {
-    /**
-     * Create an instance of Accept Notification response.
-     *
-     * @param  \Omnipay\Common\Message\RequestInterface  $request
-     * @param  array  $data
-     * @return void
-     *
-     * @throws \Omnipay\Common\Exception\InvalidResponseException
-     */
-    public function __construct(RequestInterface $request, $data)
-    {
-        parent::__construct($request, $data);
-
-        if ($this->hasUnsupportedType()) {
-            throw new InvalidResponseException('Only macro/EMA payment callbacks are accepted');
-        }
-
-        if ($this->isSuccessful()) {
-            echo 'OK';
-        }
-    }
-
-    /**
-     * Determine the response has unsupported type.
-     *
-     * @return bool
-     */
-    protected function hasUnsupportedType()
-    {
-        return ! in_array($this->getDataValueOrNull('type'), ['macro', 'EMA']);
-    }
-
     /**
      * {@inheritdoc}
      */

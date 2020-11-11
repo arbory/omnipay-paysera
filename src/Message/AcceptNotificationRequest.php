@@ -21,6 +21,27 @@ class AcceptNotificationRequest extends AbstractRequest
     }
 
     /**
+     * Get the API version.
+     *
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->getParameter('version');
+    }
+
+    /**
+     * Set the API version.
+     *
+     * @param  string  $value
+     * @return $this
+     */
+    public function setVersion($value)
+    {
+        return $this->setParameter('version', $value);
+    }
+
+    /**
      * {@inheritdoc}
      *
      * @return \Omnipay\Paysera\Message\AcceptNotificationResponse

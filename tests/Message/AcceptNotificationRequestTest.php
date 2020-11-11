@@ -116,17 +116,6 @@ class AcceptNotificationRequestTest extends TestCase
         $this->createRequest()->send();
     }
 
-    public function testSendFailure_InvalidNotifyType()
-    {
-        $pendingData = $this->getSuccessData();
-        $pendingData['type'] = 'not_macro';
-
-        $this->httpRequest->attributes->replace($this->notifyData($pendingData));
-
-        $this->expectException('\Omnipay\Common\Exception\InvalidResponseException');
-        $this->createRequest()->send();
-    }
-
     /**
      * @param  array  $data
      * @return array
