@@ -2,19 +2,19 @@
 
 **Paysera gateway driver for the Omnipay PHP payment processing library**
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/semyonchetvertnyh/omnipay-paysera.svg?style=flat-square)](https://packagist.org/packages/semyonchetvertnyh/omnipay-paysera)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/arbory/omnipay-paysera.svg?style=flat-square)](https://packagist.org/packages/arbory/omnipay-paysera)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/semyonchetvertnyh/omnipay-paysera/master.svg?style=flat-square)](https://travis-ci.org/semyonchetvertnyh/omnipay-paysera)
+[![Build Status](https://img.shields.io/travis/arbory/omnipay-paysera/master.svg?style=flat-square)](https://travis-ci.org/arbory/omnipay-paysera)
 [![StyleCI](https://styleci.io/repos/175416737/shield)](https://styleci.io/repos/175416737)
-[![Quality Score](https://img.shields.io/scrutinizer/g/semyonchetvertnyh/omnipay-paysera.svg?style=flat-square)](https://scrutinizer-ci.com/g/semyonchetvertnyh/omnipay-paysera)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/semyonchetvertnyh/omnipay-paysera/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/semyonchetvertnyh/omnipay-paysera/?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/semyonchetvertnyh/omnipay-paysera.svg?style=flat-square)](https://packagist.org/packages/semyonchetvertnyh/omnipay-paysera)
+[![Quality Score](https://img.shields.io/scrutinizer/g/arbory/omnipay-paysera.svg?style=flat-square)](https://scrutinizer-ci.com/g/arbory/omnipay-paysera)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/arbory/omnipay-paysera/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/arbory/omnipay-paysera/?branch=master)
+[![Total Downloads](https://img.shields.io/packagist/dt/arbory/omnipay-paysera.svg?style=flat-square)](https://packagist.org/packages/arbory/omnipay-paysera)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment processing library for PHP 5.3+. This package implements [Paysera](https://www.paysera.com/) support for Omnipay.
 
 ## Installation
 
-Omnipay is installed via [Composer](http://getcomposer.org/). To install, require `league/omnipay` and `semyonchetvertnyh/omnipay-paysera` with Composer:
+Omnipay is installed via [Composer](http://getcomposer.org/). To install, require `league/omnipay` and `arbory/omnipay-paysera` with Composer:
 
 ```bash
 composer require league/omnipay arbory/omnipay-paysera

@@ -1,5 +1,5 @@
 {
-    "name": "semyonchetvertnyh/omnipay-paysera",
+    "name": "arbory/omnipay-paysera",
     "type": "library",
     "description": "Paysera gateway for Omnipay payment processing library",
     "keywords": [
@@ -11,7 +11,7 @@
         "payment",
         "purchase"
     ],
-    "homepage": "https://github.com/semyonchetvertnyh/omnipay-paysera",
+    "homepage": "https://github.com/arbory/omnipay-paysera",
     "license": "MIT",
     "authors": [
         {
