@@ -75,4 +75,12 @@ class AcceptNotificationResponse extends AbstractResponse implements Notificatio
     {
         return isset($this->data[$name]) ? $this->data[$name] : null;
     }
+
+    /**
+     * @return bool
+     */
+    public function isServerToServerRequest(): bool
+    {
+        return $this->request->isServerToServerRequest();
+    }
 }

@@ -40,6 +40,7 @@ class AcceptNotificationRequestTest extends TestCase
     public function testSendSuccess()
     {
         $this->httpRequest->attributes->replace($this->notifyData($this->getSuccessData()));
+        $this->httpRequest->headers->set('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15');
 
         /** @var \Omnipay\Paysera\Message\AcceptNotificationResponse $response */
         $response = $this->createRequest()->send();
@@ -50,6 +51,25 @@ class AcceptNotificationRequestTest extends TestCase
         $this->assertSame(NotificationInterface::STATUS_COMPLETED, $response->getTransactionStatus());
         $this->assertSame('1', $response->getCode());
         $this->assertTrue($response->isTestMode());
+        $this->assertFalse($response->isServerToServerRequest());
+        $this->assertSame($successData['paytext'], $response->getMessage());
+    }
+
+    public function testSendSuccessCallbackFromPayseraServer()
+    {
+        $this->httpRequest->attributes->replace($this->notifyData($this->getSuccessData()));
+        $this->httpRequest->headers->set('User-Agent', 'Mozilla/5.0 (compatible; Evp)');
+
+        /** @var \Omnipay\Paysera\Message\AcceptNotificationResponse $response */
+        $response = $this->createRequest()->send();
+
+        $this->assertTrue($response->isSuccessful());
+        $successData = $this->getSuccessData();
+        $this->assertSame($successData['orderid'], $response->getTransactionReference());
+        $this->assertSame(NotificationInterface::STATUS_COMPLETED, $response->getTransactionStatus());
+        $this->assertSame('1', $response->getCode());
+        $this->assertTrue($response->isTestMode());
+        $this->assertTrue($response->isServerToServerRequest());
         $this->assertSame($successData['paytext'], $response->getMessage());
     }
 

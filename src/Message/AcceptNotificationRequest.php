@@ -8,6 +8,8 @@ use Omnipay\Common\Exception\InvalidRequestException;
 
 class AcceptNotificationRequest extends AbstractRequest
 {
+    private const PAYSERA_USER_AGENT_STRING = 'Evp';
+
     /**
      * {@inheritdoc}
      */
@@ -58,6 +60,11 @@ class AcceptNotificationRequest extends AbstractRequest
         $this->response = new AcceptNotificationResponse($this, $this->parseData($data['data']));
 
         return $this->response;
+    }
+
+    public function isServerToServerRequest(): bool
+    {
+        return (strpos($this->httpRequest->headers->get('user-agent'), self::PAYSERA_USER_AGENT_STRING) !== false);
     }
 
     /**
